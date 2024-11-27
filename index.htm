@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>AO Bussikuvat</title>
+<title>AO Bussikuvat</title>
 
-    <!-- add icon link -->
-    <link rel="icon" href=
-"kuva tähän"
-        type="image/x-icon" />
+<!-- Add icon link -->
+<link rel="icon" href="kuva_tähän" type="image/x-icon" />
+
 <style>
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -42,47 +42,86 @@ body {
   box-sizing: border-box;
 }
 
-.row {
-  display: flex;
+/* Flexbox Rows */
+.row, .row2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust column count */
+  gap: 10px; /* Add spacing between images */
+  margin: 10px 0; /* Add spacing between rows */
 }
 
-/* Create three equal columns that sits next to each other */
-.column {
-  flex: 33.33%;
-  padding: 5px;
+
+.column, .column2 {
+  flex: 0 1 calc(33.33% - 10px); /* Ensure three images per row with space */
+  margin: 5px; /* Add spacing between images */
 }
 
+img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Rounded edges for images */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .column, .column2 {
+    flex: 0 1 calc(50% - 10px); /* Two columns on medium screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column, .column2 {
+    flex: 0 1 calc(100% - 10px); /* Single column on small screens */
+  }
+}
 </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <div class="topnav">
   <a class="active" href="index.htm">Kuvat</a>
   <a href="#about">Tietoja</a>
+  <a href="#puhelin">Puhelin Versio</a>
   <a href="english.htm">In English</a>
 </div>
 
+<!-- Header -->
 <div style="padding-left:16px">
   <h1>AO Bussikuvat</h1>
 </div>
 
- <div class="row">
+<!-- First Row of Images -->
+<div class="row">
   <div class="column">
-    <img src="kuvat/scala1.jpg" alt="Scania Lahti Scala" style="width:100%">
+    <img src="kuvat/scala1.jpg" alt="Scania Lahti Scala">
   </div>
   <div class="column">
-    <img src="kuvat/scala2.jpg" alt="Scania Lahti Scala" style="width:100%">
+    <img src="kuvat/scala2.jpg" alt="Scania Lahti Scala">
   </div>
   <div class="column">
-    <img src="kuvat/volvo1.jpg" alt="Volvo 8900LE" style="width:100%">
+    <img src="kuvat/volvo1.jpg" alt="Volvo 8900LE">
   </div>
   <div class="column">
-    <img src="kuvat/byd11.jpg" alt="BYD ??????" style="width:100%">
+    <img src="kuvat/byd11.jpg" alt="BYD ??????">
   </div>
+</div>
 
-</div> 
-
-
+<!-- Second Row of Images -->
+<div class="row2">
+  <div class="column2">
+    <img src="kuvat/onni/scala1.jpg" alt="Scania Lahti Scala">
+  </div>
+  <div class="column2">
+    <img src="kuvat/onni/volvo1.jpg" alt="Volvo 8900LE">
+  </div>
+  <div class="column2">
+    <img src="kuvat/onni/byd1.jpg" alt="BYD ??????">
+  </div>
+  <div class="column2">
+    <img src="kuvat/onni/byd2.jpg" alt="BYD ??????">
+  </div>
+</div>
 
 </body>
 </html>
