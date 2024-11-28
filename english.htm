@@ -43,7 +43,7 @@ body {
 }
 
 /* Flexbox Rows */
-.row, .row2 {
+.row, .row2, .row3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust column count */
   gap: 10px; /* Add spacing between images */
@@ -51,7 +51,7 @@ body {
 }
 
 
-.column, .column2 {
+.column, .column2, .column3 {
   flex: 0 1 calc(33.33% - 10px); /* Ensure three images per row with space */
   margin: 5px; /* Add spacing between images */
 }
@@ -64,13 +64,13 @@ img {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .column, .column2 {
+  .column, .column2, .column3 {
     flex: 0 1 calc(50% - 10px); /* Two columns on medium screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .column, .column2 {
+  .column, .column2, .column3 {
     flex: 0 1 calc(100% - 10px); /* Single column on small screens */
   }
 }
@@ -121,6 +121,23 @@ img {
     <img src="kuvat/onni/byd2.jpg" alt="BYD ??????">
   </div>
 </div>
+
+<!-- Third Row of Images -->
+<div class="row3">
+  <div class="column3">
+    <img src="kuvat/onni/scala2.jpg" alt="Scania Lahti Scala">
+  </div>
+  <div class="column3">
+    <img src="kuvat/onni/omni1.jpg" alt="Scania OmniExpress 320 LE">
+  </div>
+  <div class="column3">
+    <img src="kuvat/onni/omni2.jpg" alt="Scania OmniExpress 320 LE">
+  </div>
+  <div class="column3"> 
+    <img src="kuvat/trolli.jpg" alt="???????">
+  </div>
+</div>
+
 
 </body>
 </html>
