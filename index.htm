@@ -13,7 +13,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -43,7 +42,7 @@ body {
 }
 
 /* Flexbox Rows */
-.row, .row2, .row3 {
+.row, .row2, .row3, .row4, .row5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust column count */
   gap: 10px; /* Add spacing between images */
@@ -51,7 +50,7 @@ body {
 }
 
 
-.column, .column2, .column3 {
+.column, .column2, .column3, .column4, .column5 {
   flex: 0 1 calc(33.33% - 10px); /* Ensure three images per row with space */
   margin: 5px; /* Add spacing between images */
 }
@@ -64,13 +63,13 @@ img {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .column, .column2, .column3 {
+  .column, .column2, .column3, .column4, .column5  {
     flex: 0 1 calc(50% - 10px); /* Two columns on medium screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .column, .column2, .column3 {
+  .column, .column2, .column3, .column4, .column5 {
     flex: 0 1 calc(100% - 10px); /* Single column on small screens */
   }
 }
@@ -102,7 +101,7 @@ img {
     <img src="kuvat/volvo1.jpg" alt="Volvo 8900LE">
   </div>
   <div class="column">
-    <img src="kuvat/byd11.jpg" alt="BYD ??????">
+    <img src="kuvat/byd1.jpg" alt="BYD ??????">
   </div>
 </div>
 
@@ -138,6 +137,38 @@ img {
   </div>
 </div>
 
+<!-- Fourth Row of Images -->
+<div class="row4">
+  <div class="column4">
+    <img src="kuvat/byd2.jpg" alt="???????">
+  </div>
+  <div class="column4">
+    <img src="kuvat/byd3.jpg" alt="???????">
+  </div>
+  <div class="column4">
+    <img src="kuvat/byd4.jpg" alt="???????">
+  </div>
+  <div class="column4"> 
+    <img src="kuvat/scala3.jpg" alt="Scania Lahti Scala">
+  </div>
+</div>
+
+<!-- Fifth Row of Images -->
+<div class="row5">
+  <div class="column5">
+    <img src="kuvat/scala4.jpg" alt="Scania Lahti Scala">
+  </div>
+  <div class="column5">
+    <img src="kuvat/scala5.jpg" alt="Scania Lahti Scala">
+  </div>
+  <div class="column5">
+    <img src="kuvat/omni1.jpg" alt="Scania OmniExpress 320 LE">
+  </div>
+  <div class="column5">
+    <img src="kuvat/yutong1.jpg" alt="Yutong E15">
+  </div>
+  
+</div>
 
 </body>
 </html>
