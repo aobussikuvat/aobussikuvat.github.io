@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AO Bussikuvat</title>
+
+<!-- Favicon -->
+<link rel="icon" href="logo.png" type="image/x-icon" />
+
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00b451;
+  color: white;
+}
+
+/* Flexbox Layout for "Havainnot" Section */
+.havainnot-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px;
+}
+
+.havainnot-text {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.havainnot-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.havainnot-imagesyks {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.havainnot-images img {
+  width: 100%;
+  max-width: 500px; /* Suuremmat kuvat */
+  border-radius: 5px;
+}
+.havainnot-imagesyks img {
+  width: 450px;
+  max-width: 100%; /* Suuremmat kuvat */
+  border-radius: 5px;
+}
+
+/* Image Grid */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Suuremmat sarakkeet */
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .havainnot-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .havainnot-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .havainnot-images img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .havainnot-images img {
+    width: 100%;
+  }
+
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Yksi kuva per rivi pienillä näytöillä */
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="topnav">
+  <a href="index.htm">Koti</a> 
+  <a class="active" href="havainnot.htm">Havainnot</a>
+  <a href="suomi.htm">Suomi</a> 
+  <a href="https://mdbusphotos.github.io">Alankomaat</a> 
+  <a href="viro.htm">Viro</a> 
+  <a href="tietoja.htm">Tietoja</a> 
+  <a href="observations.htm">In English</a>
+</div>
+
+<!-- Page Title -->
+<div style="padding-left:16px">
+  <h1>AO Bussikuvat</h1>
+</div>
+
+<!-- Havainnot Section -->
+<div style="padding-left:16px">
+  <h2>Kaikki havainnot</h2>
+</div>
+
+<div class="havainnot-container">
+  <div class="havainnot-text">
+    <p>(11.3.2025) Turun Kaupunkiliikenteen #51 takaovi on mennyt rikki.</p>
+    <p>Mahdollinen tapahtuman syy on, että paineilma putki on hajonnut.</p>
+    <p>Kuvat on ottanut Onni Hällfors</p>
+    
+  </div>
+  
+  <div class="havainnot-imagesyks">
+    <img src="kuvat/onni/scalaH3.JPG">
+    <img src="kuvat/onni/scalaH4.jpg">
+    
+  </div>
+  <br>
+</div>
+<div class="havainnot-container">
+  <div class="havainnot-text">
+    <p>(7.3.2025) Turun Kaupunkiliikenteen #25 vasen takalasi oli rikottu.</p>
+    <p>Mahdollinen tapahtuman syy on, että joku on mennyt lyömään lasia hätävasaralla.</p>
+    <p>Kuvat on ottanut Onni Hällfors</p>
+    
+  </div>
+  <div class="havainnot-images">
+    <img src="kuvat/onni/scalaH1.jpg">
+    <img src="kuvat/onni/scalaH2.jpg">
+    
+  </div>
+  <br>
+</div>
+
+</body>
+</html>
