@@ -40,7 +40,7 @@ body {
 }
 
 /* Flexbox Layout for "Havainnot" Section */
-.havainnot-container {
+.isoteksti-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,7 +48,7 @@ body {
   padding: 16px;
 }
 
-.havainnot-text {
+.isoteksti {
   flex: 1;
   font-size: 20px;
   line-height: 1.6;
@@ -82,7 +82,7 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .havainnot-container {
+  .isoteksti-container {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -130,18 +130,21 @@ body {
   <h2>News</h2>
 </div>
 
-<div style="padding-left:16px">
-  <p>AO Busphoto has already gained almost 200 visits!!</p>
+<div class="isoteksti-container">
+  <div class="isoteksti">
+   <p>AO Busphoto has already gained almost 200 visits!!</p>
   <p>Thank you everybody for your support!!</p>
   <br>
+  </div>
 </div>
+
 <!-- Havainnot Section -->
 <div style="padding-left:16px">
   <h2>Observations</h2>
 </div>
 
-<div class="havainnot-container">
-    <div class="havainnot-text">
+<div class="isoteksti-container">
+    <div class="isoteksti">
     <p>Today (11.3.2025) Turun Kaupunkiliikenne #51's rear door has broken.</p>
     <p>Possible reason for this is that the compressed air pipe has broken.</p>
     <p>Photos taken by Onni Hällfors</p>
