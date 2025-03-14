@@ -40,7 +40,7 @@ body {
 }
 
 /* Flexbox Layout for "Havainnot" Section */
-.havainnot-container {
+.isoteksti-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,7 +48,7 @@ body {
   padding: 16px;
 }
 
-.havainnot-text {
+.isoteksti {
   flex: 1;
   font-size: 20px;
   line-height: 1.6;
@@ -82,7 +82,7 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .havainnot-container {
+  .isoteksti-container {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -130,18 +130,22 @@ body {
   <h2>Uutiset</h2>
 </div>
 
-<div style="padding-left:16px">
-  <p>AO Bussikuvilla on käynyt jo melkein 200 henkilöä!!</p>
-  <p>Kiitos kaikille tuesta erittäin paljon!!</p>
-  <br>
+
+<div class="isoteksti-container">
+  <div class="isoteksti">
+    <p>AO Bussikuvilla on käynyt jo melkein 200 henkilöä!!</p>
+    <p>Kiitos kaikille tuesta erittäin paljon!!</p>
+    <br>
+  </div>
 </div>
+
 <!-- Havainnot Section -->
 <div style="padding-left:16px">
   <h2>Havainnot</h2>
 </div>
 
-<div class="havainnot-container">
-  <div class="havainnot-text">
+<div class="isoteksti-container">
+  <div class="isoteksti">
     <p>Tänään (11.3.2025) Turun Kaupunkiliikenteen #51 takaovi on mennyt rikki.</p>
     <p>Mahdollinen tapahtuman syy on, että paineilma putki on hajonnut.</p>
     <p>Kuvat on ottanut Onni Hällfors</p>
